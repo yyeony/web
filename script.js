@@ -83,7 +83,7 @@ contentTitle4.addEventListener('mouseleave', () => {
 
 //work 모바일 크기로 열기
 function wbtn2() {
-  const url = './작업물/김영연/index.html';
+  const url = './work/book/index.html';
   const windowName = 'MobileView'
   const features = 'width=400,height=932,toolbar=no,location=no,resizable=yes,scrollbars=no';
 
@@ -91,7 +91,7 @@ function wbtn2() {
 
 }
 function wbtn2a() {
-  const url = './작업물/김영연/persona.jpg';
+  const url = './work/book/persona.jpg';
   const windowName = 'MobileView'
   const features = 'width=680,height=1413,toolbar=no,location=no,resizable=yes,scrollbars=no';
 
@@ -99,7 +99,7 @@ function wbtn2a() {
 
 }
 function wbtn2b() {
-  const url = './작업물/김영연/storyboard.jpg';
+  const url = './work/book/storyboard.jpg';
   const windowName = 'MobileView'
   const features = 'width=880,height=1000,toolbar=no,location=no,resizable=yes,scrollbars=no';
 

@@ -448,15 +448,15 @@
             
             
         }
-        .about1{
+        /* .about1{
             width: 90%;
             margin: auto;
-        }
+        } */
         .about> .txt1, .work> .txt1, .yeon>.txt1{
             padding-top: 100px;
             margin-left: 5vw;
         }
-        .about>h1, .work> h1{
+        .about h1, .work> h1{
             font-size: 6vh;
         }
         .about .txt1 {
@@ -768,15 +768,18 @@
   margin: auto;
   margin-top: 1vw;
 }
-.dc1 h1 {
+.dc1 h2 {
   margin-top: 1.5vw;
   font-size: 2vw;
+  color: black;
 }
 .dc1 p{
   font-size: 1.2vw;
 }
 .dc1 button{
-  
+  width: 6vw;
+  height: 2vw;
+  background-color: black;
 }
 
 .dcontent li.visible {
