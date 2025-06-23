@@ -485,6 +485,9 @@
         .about h1, .work> h1{
             font-size: 6vh;
         }
+        .about h1 span{
+          color:royalblue ;
+        }
         .about .txt1 {
           opacity: 0;
           transform: translateY(40%);
