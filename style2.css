@@ -14,6 +14,9 @@
     font-size:110px;
     transition: all .3s ease;
  }
+ /* main .main_bg{
+  background: url(./images/mainbg2-01.jpg) center/cover;
+ } */
     .about >.txt1 h1{
       font-size: 50px;
     }
@@ -162,7 +165,7 @@
   }
 .work li .img{
     width: 95%;
-    height: 45vw;
+    height: 55vw;
   }
   .work li .txt {
     margin-left: 20px;
@@ -189,12 +192,17 @@
   .work li .story{
     font-size: 2.5vw;
   }
+
   .detail .txt1 .txt-wrap{
     margin-left: 0;
+    margin-bottom: 1vw;
   }
   .detail .txt1 .txt-wrap h1{
     font-size: 5.5vw;
     margin-left: 0;
+  }
+  .detail .txt-wrap h3{
+    margin-top: 3vw;
   }
   .dcontent{
     margin: auto;
@@ -205,14 +213,32 @@
   }
   .dcontent .dc1 li, .dcontent .dc2 li{
     margin: auto;
-    width: 60vw;
-    height: 70vw;
+    width: 70vw;
+    height:85vw;
+    padding: 2vw;
   }
-  .dcontent .dc1 li:nth-child(2),
-  .dcontent .dc2 li:nth-child(1),
-  .dcontent .dc2 li:nth-child(2){
+  .dcontent .dc1 a:nth-child(2),
+  .dcontent .dc2 a:nth-child(1),
+  .dcontent .dc2 a:nth-child(2){
     margin-top: 25vw;
   }
+
+  .dcontent .dc1 .img,
+  .dcontent .dc2 .img{
+    margin-top: 3vw;
+    width: 60vw;
+    height: 45vw;
+  }
+  .dcontent .dc1 h2,
+  .dcontent .dc2 h2{
+    font-size: 5vw;
+    margin-top: 5vw;
+  }
+  .dcontent .dc1 p,
+  .dcontent .dc2 p{
+    font-size: 3vw;
+  }
+
 
   .f_txt1 h3, .f_txt1 p{
     font-size: 24px;
@@ -375,7 +401,7 @@
    
         /* 메인시작  */
         
-        main .main_bg{
+        .main_bg{
             position: relative;
             width: 100%;
             height: calc(100vh);
@@ -747,7 +773,7 @@
   margin: auto;
 }
 
-.dcontent li {
+.dcontent li{
   width: 30vw;
   height: 35vw;
   background-color: white;
@@ -768,12 +794,14 @@
   margin: auto;
   margin-top: 1vw;
 }
-.dc1 h2 {
+.dc1 h2,
+.dc2 h2 {
   margin-top: 1.5vw;
   font-size: 2vw;
   color: black;
 }
-.dc1 p{
+.dc1 p,
+.dc2 p{
   font-size: 1.2vw;
 }
 .dc1 button{
@@ -787,8 +815,7 @@
   transform: translateY(0);
 }
 
-.dcontent li:nth-child(2n) {
-  background-color: yellow;
+.dcontent a:nth-child(2n) {
   margin-top: 45vw;
 }
 
