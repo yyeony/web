@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 430px;
+}
+ul{
+    list-style: none;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: #333;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    border-bottom: 1px solid lightgray;
+    
+    
+}
+.header .wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.wrap p:nth-child(1){
+    margin-left: 20px;
+}
+.wrap .top_icon{
+    display: flex;
+    margin-right: 20px;
+}
+.header p{
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 40px;
+}
+.top_icon p:nth-child(2){
+    margin-left: 16px;
+}
+.main{
+    margin-top: 135px;
+    width: 100%;
+}
+.main .random{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.random span{
+    color: rgb(0, 159, 227);
+}
+.random p{
+    margin-top: 10px;
+    color: rgb(119, 119, 119);
+}
+.random button{
+    margin-top: 30px;
+    width: 300px;
+    height: 60px;
+    background: linear-gradient(90deg, rgb(183 249 192),rgb(0 159 227));
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: 0;
+}
+.random button a{
+    color: white;
+}
+.random .b_btn{
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+
+.select{
+    width: 100%;
+}
+.sel1{
+    width: 80%;
+    /* background-color: orange; */
+    margin: auto;
+    margin-top: 80px;
+}
+
+.txt{
+    display: flex;
+}
+.txt span{
+    color: red;
+}
+ .txt .span1{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.click p{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 24px;
+    padding: 6px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.ov{
+    background-color: rgb(0, 159, 227);
+    color: white;
+    border: 0px !important;
+}
+
+
+.sel2{
+    width: 80%;
+    /* background-color: orange; */
+    margin: auto;
+    margin-top: 50px;
+}
+.txt .span2{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: rgb(0, 159, 227);
+}
+.sel3{
+    width: 80%;
+    /* background-color: orange; */
+    margin: auto;
+    margin-top: 50px;
+}
+.star{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.star img{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+.a{
+    background: url(../images/star1.svg);
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.txt .span3{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: rgb(0, 159, 227);
+}
+.sel4, .sel5{
+    width: 80%;
+    /* background-color: orange; */
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+/* 하단 고정탭 */
+.tab{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    /* display: flex */
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+}
+.tab .bottom_icon{
+    display: flex;
+    justify-content: space-between;
+}
+.tab .bottom_icon img{
+    width: 40px;
+    height: 40px;
+    /* background-color: gray; */
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tab .bottom_icon span{
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    line-height: 10px;
+    color: rgb(119, 119, 119);
+}

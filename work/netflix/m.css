@@ -1,0 +1,79 @@
+body{
+    min-width: 360px;
+}
+main .banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.banner .name{
+    margin: 0;
+    scale: 1;
+}
+.banner .play button{
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+}
+.title .title1, .title .title2{
+    width: 100%;
+}
+.title .title2{
+    margin: 0;
+    margin-top: 10px;
+}
+.title2::before{
+    display: none;
+}
+.trailer{
+    width: 100%;
+}
+.trailer .trailer1 li{
+    width: 100%;
+}
+
+.trailer ul{
+    overflow-x:scroll ;
+    scrollbar-width: none;
+}
+
+.detail1{
+    display: flex;
+    flex-direction: column;
+}
+.detail1 li{
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.membership ul{
+    display: flex;
+    flex-direction: column;
+}
+.membership>ul >li {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.mini_b{
+    display: flex;
+    flex-direction: column;
+}
+.mini_b button{
+    margin-top: 10px;
+}
+
+footer .f_li{
+    display: flex;
+    flex-direction: column;
+}
+footer .f_li ul{
+    margin-top: 10px;
+}

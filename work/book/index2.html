@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style2.css" />
+    <script>
+      window.open("index.html", "mobileView", "width=430,height=932");
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="wrap">
+        <p class="back"><img src="./images/back.svg" alt="뒤로가기" /></p>
+        <div class="top_icon">
+          <p><img src="./images/share.svg" alt="공유" /></p>
+          <p><img src="./images/menu.svg" alt="멘" /></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="random">
+        <h2>오늘은 <span>어떤 책</span>을 읽어볼까?</h2>
+        <p>나의 상황과 취향을 설정해보세요</p>
+        <button>랜덤으로 읽을래요 ></button>
+      </div>
+
+      <div class="select" id="c_click">
+        <div class="sel1">
+          <div class="txt">
+            <span>&#42;</span>
+            <h3>나이</h3>
+            <span class="span1">(필수)</span>
+          </div>
+          <div class="click">
+            <p>10대</p>
+            <p>20대</p>
+            <p>30대</p>
+            <p>40대</p>
+            <p>50대</p>
+            <p>60대</p>
+            <p>70대 이상</p>
+          </div>
+        </div>
+        <div class="sel2">
+          <div class="txt">
+            <span>&#42;</span>
+            <h3>관심사</h3>
+            <span class="span1">(필수)</span>
+            <span class="span2">(중복 3개까지 가능)</span>
+          </div>
+          <div class="click">
+            <p>소설</p>
+            <p>자기계발</p>
+            <p>과학</p>
+            <p>역사</p>
+            <p>여행</p>
+            <p>예술</p>
+            <p>철학</p>
+            <p>경제</p>
+            <p>종교</p>
+            <p>만화</p>
+            <p>시&#183;에세이</p>
+            <p>일상</p>
+            <p>기타</p>
+          </div>
+        </div>
+        <div class="sel3">
+          <div class="txt">
+            <span>&#42;</span>
+            <h3>난이도</h3>
+            <span class="span1">(필수)</span>
+          </div>
+          <div class="star">
+            <img src="./images/star_empty.svg" alt="" />
+            <img src="./images/star_empty.svg" alt="" />
+            <img src="./images/star_empty.svg" alt="" />
+            <img src="./images/star_empty.svg" alt="" />
+            <img src="./images/star_empty.svg" alt="" />
+          </div>
+        </div>
+        <div class="sel4">
+          <div class="txt">
+            <span>&nbsp;</span>
+            <h3>분위기</h3>
+            <span class="span3">(선택사항)</span>
+          </div>
+          <div class="click">
+            <p>행복</p>
+            <p>재미</p>
+            <p>감동</p>
+            <p>공포&#183;스릴러</p>
+            <p>정보</p>
+            <p>기타</p>
+          </div>
+        </div>
+        <div class="sel5">
+          <div class="txt">
+            <span>&nbsp;</span>
+            <h3>직업</h3>
+            <span class="span3">(선택사항)</span>
+          </div>
+          <div class="click">
+            <p>학생</p>
+            <p>직장인</p>
+            <p>주부</p>
+            <p>무직</p>
+          </div>
+        </div>
+
+        <div class="random">
+          <button class="b_btn">
+            <a href="./index3.html">나의 책 보러가기 ></a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하단 고정탭-->
+    <div class="footer">
+      <div class="tab">
+        <div class="bottom_icon">
+          <p class="icon1">
+            <a href="./index.html">
+              <img src="./images/tab1.svg" alt="홈" />
+              <span>홈</span>
+            </a>
+          </p>
+          <p class="icon2">
+            <img src="./images/tab2.svg" alt="서재" />
+            <span>서재</span>
+          </p>
+          <p class="icon3">
+            <img src="./images/tab3.svg" alt="검색" />
+            <span>검색</span>
+          </p>
+          <p class="icon4">
+            <img src="./images/tab4.svg" alt="스토어" />
+            <span>스토어</span>
+          </p>
+          <p class="icon5">
+            <img src="./images/tab5.svg" alt="관리" />
+            <span>관리</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      //별점 스타일
+
+      const stars = document.querySelectorAll(".star img");
+
+      stars.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          stars.forEach((star) => star.classList.remove("a"));
+
+          for (let i = 0; i <= index; i++) {
+            stars[i].classList.add("a");
+          }
+        });
+      });
+
+      // document.querySelectorAll('.star img').forEach(img=>{
+      //     img.addEventListener('click',()=>{
+      //     img.classList.toggle('a');
+      // })
+      //     })
+
+      document.querySelectorAll(".sel1 .click p").forEach((p) => {
+        p.addEventListener("click", () => {
+          // 모두에서 클래스 제거
+          document
+            .querySelectorAll(".sel1 .click p")
+            .forEach((el) => el.classList.remove("ov"));
+          // 현재 클릭한 p만 추가
+          p.classList.add("ov");
+        });
+      });
+
+      //중복 3개 선택
+      const maxSelect = 3;
+
+      document.querySelectorAll(".sel2 .click p").forEach((p) => {
+        p.addEventListener("click", () => {
+          if (p.classList.contains("ov")) {
+            // 이미 선택된 거 다시 클릭하면 해제
+            p.classList.remove("ov");
+          } else {
+            const selected = document.querySelectorAll(".sel2 .click p.ov");
+            if (selected.length < maxSelect) {
+              p.classList.add("ov");
+            } else {
+              alert(`최대 ${maxSelect}개까지만 선택할 수 있어요!`);
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll(".sel4 .click p").forEach((p) => {
+        p.addEventListener("click", () => {
+          const isSelected = p.classList.contains("ov");
+
+          // 모두 해제
+          document
+            .querySelectorAll(".sel4 .click p")
+            .forEach((el) => el.classList.remove("ov"));
+
+          // 클릭한 항목이 이전에 선택 안 됐으면 다시 추가 (토글 효과)
+          if (!isSelected) {
+            p.classList.add("ov");
+          }
+        });
+      });
+
+      document.querySelectorAll(".sel5 .click p").forEach((p) => {
+        p.addEventListener("click", () => {
+          const isSelected = p.classList.contains("ov");
+
+          // 모두 해제
+          document
+            .querySelectorAll(".sel5 .click p")
+            .forEach((el) => el.classList.remove("ov"));
+
+          // 클릭한 항목이 이전에 선택 안 됐으면 다시 추가 (토글 효과)
+          if (!isSelected) {
+            p.classList.add("ov");
+          }
+        });
+      });
+
+      document.querySelector(".back").addEventListener("click", () => {
+        window.history.back();
+      });
+    </script>
+  </body>
+</html>

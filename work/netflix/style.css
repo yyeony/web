@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+body{
+    background: black;
+    /* min-width: 600px;     */
+}
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo img{
+    width: 200px;
+    margin-left: 20px;
+}
+header button{
+    width: 80px;
+    height: 32px;
+    margin-right: 40px;
+    border-radius: 20px;
+    border: none;
+    transition: all .2s;
+    color: black;
+}
+header button:hover{
+    background-color: lightgray;
+    color: black;
+    
+}
+
+main .banner{
+    width: 90%;
+    height: 80vh;
+    background:url(./images/승리호\ 메인_수정.jpg) no-repeat center/cover;
+    border: 3px solid rgba(56, 56, 56, 0.74);
+    margin: auto;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.name{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+    margin-left: 120px;
+    scale: 1.2;
+}
+.name input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    outline: none;
+    padding-left: 10px;
+}
+.name input[type=text], .name input::placeholder{
+    color: white;
+}
+.name button{
+    width: 200px;
+    height: 34px;
+    border-radius: 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    margin-top: 20px;
+    transition: all .2s;
+}
+.name button:hover{
+    background-color: rgb(206, 11, 11);
+}
+.name>p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+}
+.cate{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.cate p{
+    color: white;
+}
+.cate img{
+    scale: .6;
+}
+.name>img{
+    margin-bottom: 30px;
+}
+.play button{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 120px;
+    height: 34px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 100px;
+    margin-right: 120px;
+    scale: 1.2;
+    transition: all .2s;
+}
+.play button:hover{
+    border: 1px solid white;
+}
+.play img{
+    filter: invert(100%);
+}
+
+.title{
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    background-color: rgb(54, 54, 54);
+    border: 1px solid rgb(77, 77, 77);
+    background-blend-mode: overlay;
+    box-sizing: border-box;
+}
+.title1{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.title1 p{
+    margin-top: 10px;
+}
+.title2{
+    width: 50%;
+    margin-left: 50px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.title2::before{
+    content: '';
+    width: 1px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: -20px;
+}
+
+.trailer{
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 30px;
+}
+.trailer .trailer1{
+    display: flex;
+}
+.trailer p{
+    margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+}
+.trailer span{
+    font-weight: bold;
+    color: lightgray;
+}
+.trailer p img{
+    filter: invert(100%);
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.trailer li:nth-child(1) p:nth-child(1){
+    width: 340px;
+    height: 200px;
+    background:url(./images/예고1.jpg) center/cover;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.trailer li:nth-child(2) p:nth-child(1){
+    width: 340px;
+    height: 200px;
+    background:url(./images/예고2.jpg)center/cover;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.trailer li:nth-child(2){
+    margin-left: 20px;
+}
+
+.detail{
+    width: 80%;
+    padding: 30px;
+    padding-top: 40px;
+    margin: auto;
+}
+.detail .detail1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.detail li{
+    width: 32%;
+    background-color: rgb(54, 54, 54);
+    border: 1px solid rgb(77, 77, 77);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.detail p{
+    margin-bottom: 10px;
+}
+
+.like{
+    width: 80%;
+    padding: 30px;
+    padding-top: 40px;
+    margin: auto;
+
+}
+.like ul{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+      
+
+}
+.like li{
+    width: 280px;
+    height: 400px;
+    background-color: lightgray;
+    margin-right: 10px;
+    border-radius: 20px;
+    
+}
+
+
+.membership{
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+.membership h1{
+    margin-bottom: 20px;
+}
+.membership ul{
+    display: flex;
+    justify-content: space-between;
+}
+.membership>ul >li{
+    width: 32%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid rgba(54, 54, 54, 0.8);
+    transition: all .2s;
+    
+}
+.membership>ul>li:nth-child(1){
+    background:linear-gradient(125deg, rgb(28,69,128), rgb(25,36,69), black) ;
+    transition: all .2s;
+}
+.membership>ul>li:nth-child(1):hover{
+    background:linear-gradient(125deg, rgb(57, 103, 168), rgb(25,36,69), black) ;
+}
+.membership>ul>li:nth-child(2){
+    background:linear-gradient(125deg, rgb(84,32,106), rgb(36,22,64), black) ;
+}
+.membership>ul>li:nth-child(2):hover{
+    background:linear-gradient(125deg, rgb(109, 45, 136), rgb(36,22,64), black) ;
+}
+.membership>ul>li:nth-child(3){
+    background:linear-gradient(125deg, rgb(108,30,65), rgb(31,20,65), black) ;
+}
+.membership>ul>li:nth-child(3):hover{
+    background:linear-gradient(125deg, rgb(161, 49, 99), rgb(31,20,65), black) ;
+}
+.membership>ul li:not(.mb2 li){
+    padding: 30px;
+
+}
+.mb2 {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+.mb2 li{
+    width: 100%;
+    display: flex;
+    line-height: 40px;
+    
+}
+.mb2 p{
+    white-space: nowrap;
+    margin-left: 10px;
+}
+.mb2 img{
+    filter: invert(100%);
+}
+
+.mini_b{
+    width: 80%;
+    background:url(./images/미니배너.jpg) top/cover;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 16px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+}
+.mini_b::before{
+    width: 100%;
+    height: 30vh;
+    border-radius: 20px;
+    content: '';
+    background:rgba(7, 7, 7, 0.6);
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.mini_b button{
+    padding: 10px;
+    background-color: black;
+    border: 1px solid rgb(143, 143, 143);
+    border-radius: 20px;
+    transition: all .2s;
+}
+.mini_b button:hover{
+    border: 1px solid white;
+}
+main .f_btn{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(57, 114, 57, 0) 100%);
+   position: sticky;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.f_btn button {
+    padding: 20px;
+    width: 240px;
+    height: 60px;
+    background-color: red;
+   margin-top: 80px;
+   margin-bottom: 30px;
+   border-radius: 40px;
+   text-align: center;
+   line-height: 10px;
+   border: none;
+   transition: all .2s;
+}
+.f_btn button p{
+    white-space: nowrap;
+    font-size: 1.5em;
+}
+.f_btn button:hover{
+    background-color: rgb(201, 14, 14);
+}
+
+footer{
+    margin-top: 80px;
+    width: 70%;
+    margin: auto;
+    padding: 30px;
+    margin-bottom: 80px;
+}
+footer a:hover{
+    text-decoration: none;
+}
+footer .f_li{
+    display: flex;
+    width: 1000px;
+}
+.f_li ul{
+    margin-right: 100px;
+}
+.f_li li{
+    line-height: 30px;
+}
+footer select{
+    width: 120px;
+    height: 34px;
+    border: 1px solid white;
+    background-color: black;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+footer p{
+    margin-bottom: 40px;
+}
+.txt{
+    line-height: 30px;
+}
+.txt p{
+    margin-top: 40px;
+}

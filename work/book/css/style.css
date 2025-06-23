@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 430px;
+}
+ul{
+    list-style: none;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: #333;
+}
+/* .mobile-frame {
+  width: 430px; 
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  overflow-y: auto;
+}
+.phone-mockup {
+  width: 450px;
+  height: 1000px;
+  border: 16px solid black;
+  border-radius: 36px;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+} */
+
+.screen {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    border-bottom: 1px solid lightgray;
+}
+.header .logo{
+    width: 100px;
+    height: 40px;
+    /* background-color: red; */
+    margin-left: 20px;
+    line-height: 40px;
+}
+.header .top_icon{
+    display: flex;
+}
+.header .top_icon p{
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 16px;
+    /* background-color: gray; */
+}
+.top_icon .icon2{
+    margin-right: 20px;
+}
+
+
+
+/* 메인배너 */
+.banner{
+    width: 100%;
+    height: 400px;
+    background-color: lightgray;
+    margin-top: 80px;
+    position: relative;
+    background: url(../images/main_banner2.svg) center/cover;
+}
+.banner .text{
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    color: white;
+}
+.text p{
+    margin-top: 10px;
+}
+
+
+
+/* 취향배너 */
+.rec_book{
+    width: 100%;
+    height: 120px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+.rec_book a{
+    display: flex;
+}
+.heart{
+    width: 50px;
+    height: 50px;
+    /* background-color: yellowgreen; */
+    margin-left: 30px;
+}
+.rec_book .txt{
+    margin-left: 20px;
+}
+.rec_book p{
+    margin-top: 5px;
+    color: rgb(119, 119, 119);
+}
+.rec_book .arrow{
+    width: 40px;
+    height: 40px;
+    /* background-color: violet; */
+    position: absolute;
+    right: 30px;
+
+}
+.rec_book_banner{
+    width: 80%;
+    height: 160px;
+    background-color: lightgray;
+    margin: auto;
+    background: url(../images/rec_banner2.jpg) center/cover no-repeat;
+}
+
+
+
+/* 베스트셀러 */
+.best{
+    width: 100%;
+}
+.best .header2{
+    width: 100%;
+    height: 120px;
+    /* background-color: pink; */
+    position: relative;
+    margin-top: 30px;
+}
+.header2 .txt{
+    display: flex;
+    position: absolute;
+    top: 35px;
+    left: 30px;
+}
+.header2 .txt p:nth-child(1){
+    font-size: 24px;
+}
+.header2 span{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 14px;
+    color: rgb(182, 182, 182);
+}
+.header2 p:nth-child(3){
+    position: absolute;
+    top: 35px;
+    left: 0;
+    font-size: 16px;
+}
+.best .main{
+    width: 100%;
+}
+.best .main ul{
+    width: 100%;
+    
+}
+.best ul li:nth-child(1){
+    border-top: 1px solid lightgray;
+}
+.best ul li{
+    width: 100%;
+    height: 150px;
+    /* background-color:thistle; */
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+.best ul li>.img{
+    width: 90px;
+    height: 120px;
+    background-color: lightblue;
+    margin-left: 20px;
+    border-radius: 0 10px 10px 0;
+}
+.best ul li>.img img{
+    border-radius: 0 10px 10px 0;
+    box-shadow: 4px 4px 8px 0px rgb(182, 182, 182);
+}
+.best ul li h1{
+    margin-left: 30px;
+}
+.best ul li .txt{
+    margin-left: 30px;
+}
+.best ul li .txt p{
+    margin-top: 5px;
+}
+.txt .txt2{
+    margin-top: 5px;
+}
+
+.best .btn{
+    display: flex;
+    justify-content: center;
+}
+.best button{
+    width: 120px;
+    height: 50px;
+    background: linear-gradient(90deg ,rgb(183, 249, 192), rgb(0, 159, 227));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    margin-top: 40px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+/* 푸터 */
+.footer{
+    width: 100%;
+    height: 260px;
+    border-top: 1px solid lightgray;
+    margin-top: 40px;
+}
+.footer h3{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.footer li{
+    color: rgb(119, 119, 119);
+}
+.footer .txt1{
+    display: flex;
+    width: 90%;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.footer .txt1 li{
+    margin-left: 8px;
+}
+.footer .txt1 li:nth-child(1){
+    margin-left: 20px;
+}
+.footer .txt2{
+    display: flex;
+    width: 90%;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.footer .txt2 li{
+    margin-left: 4px;
+}
+.footer .txt2 li:nth-child(1){
+    margin-left: 20px;
+}
+.footer .txt3{
+    display: flex;
+    width: 90%;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.footer .txt3 li{
+    margin-left: 8px;
+}
+.footer .txt3 li:nth-child(1){
+    margin-left: 20px;
+}
+.footer p {
+    font-size: 12px;
+    color: rgb(119, 119, 119);
+    margin-left: 20px;
+}
+
+
+
+
+/* 하단 고정탭 */
+.tab{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    /* display: flex */
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+}
+.tab .bottom_icon{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.tab .bottom_icon img{
+    width: 40px;
+    height: 40px;
+    /* background-color: gray; */
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.tab .bottom_icon span{
+    text-align: center;
+    font-size: 14px;
+    display: block;
+    line-height: 10px;
+    color: rgb(119, 119, 119);
+}
+
+
+
+

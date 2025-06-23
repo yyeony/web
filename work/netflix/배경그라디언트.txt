@@ -1,0 +1,23 @@
+main .wrap::before{
+    content:'';
+    width:70%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    background: linear-gradient(to right, #181818 0, rgba(23,23,23,0.98) 20%,
+    rgba(23,23,23,0.95) 25%,
+    rgba(23,23,23,0.92) 30%,
+    rgba(23,23,23,0.9) 35%,
+    rgba(23,23,23,0.87) 40%,
+    rgba(23,23,23,0.82) 45%,
+    rgba(23,23,23,0.75) 50%,
+    rgba(23,23,23,0.63) 55%,
+    rgba(23,23,23,0.47) 60%,
+    rgba(23,23,23,0.27) 65%,
+    rgba(23,23,23,0.08) 80%,
+    rgba(23,23,23,0.03) 95%,
+    rgba(23,23,23,0.0) 100%
+    );
+}
