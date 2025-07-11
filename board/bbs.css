@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Poetsen+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a:link, a:visited{
+    color:#333;
+    text-decoration: none;
+}
+body{
+    background-color: #eee;
+     font-family: "Poetsen One", sans-serif;
+      font-family: "Hahmlet", serif;
+}
+.search{
+    width: 1440px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    border-radius: 0 0 12px 12px;
+}
+.search h3{
+    margin-right: 12px;
+    line-height: 40px;
+}
+.search img{
+    position: absolute;
+    left: 286px;
+    top: 28px;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    /* filter: invert(100%) sepia(17%) saturate(7068%) hue-rotate(51deg) brightness(100%) contrast(90%); */
+    filter: invert(100%) sepia(44%) saturate(3369%) hue-rotate(54deg) brightness(99%) contrast(85%);
+    cursor: pointer;
+}
+.search select{
+    padding: 8px;
+    font-size: 1.2em;
+    border-radius: 24px;
+}
+.search input{
+    padding: 8px;
+    font-size: 1.2em;
+    border-radius: 24px;
+    border: 3px solid rgb(87, 234, 104);
+}
+
+
+.list{
+    width: 1440px;
+    margin: 12px auto;
+    background-color: white;
+    border-radius: 12px;
+}
+.list header, .list main{
+    width: 100%;
+}
+header ul, main ul{
+    width: 100%;
+    border-bottom: 1px solid #cfcfcf;
+}
+header li, main li{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    line-height: 50px;
+}
+header p:nth-child(1),
+main p:nth-child(1){
+    width: 5%;
+}
+header p:nth-child(2),
+main p:nth-child(2){
+    width: 50%;
+}
+header p:nth-child(3),
+main p:nth-child(3){
+    width: 10%;
+}
+header p:nth-child(4),
+main p:nth-child(4){
+    width: 10%;
+}
+header p:nth-child(5),
+main p:nth-child(5){
+    width: 5%;
+}
+header p:nth-child(6),
+main p:nth-child(6){
+    width: 20%;
+}
+main ul{
+    border: 0;
+}
+
+main .btnview{
+    background-color: white;
+    border: 2px solid rgb(87, 234, 104);
+    border-radius: 8px;
+    outline: 0;
+    width: 60px;
+    height: 28px;
+}
+main .btnedit{
+    background-color: white;
+    border: 2px solid rgb(87, 234, 104);
+    border-radius: 8px;
+    outline: 0;
+    width: 60px;
+    height: 28px;
+}
+main .btndel{
+    background-color: white;
+    border: 2px solid rgb(87, 234, 104);
+    border-radius: 8px;
+    outline: 0;
+    width: 60px;
+    height: 28px;
+}
+main button:hover{
+    background-color: rgba(87, 234, 104, .2);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.list main{
+    margin-bottom: 4px;
+}
+main li{
+    border-bottom: 1px solid #eee;
+    /* margin-bottom: 4px; */
+}
+
+.insert{
+    width: 1440px;
+    margin: auto;
+    background-color: white;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 12px 12px 0 0 ;
+    text-align: right;
+}
+
+.insert .btninsert{
+    background-color: rgb(87, 234, 104);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    outline: 0;
+    width: 60px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.popinput{
+    width: 800px;
+    height: 500px;
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 18px #cfcfcf;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+.popinput ul{
+    width: 95%;
+    margin: auto;
+}
+.popinput li{
+    width: 100%;
+    margin-bottom: 8px;
+}
+.popinput li:nth-child(1) input{
+    width: 50%;
+    height: 40px;
+    border-radius: 8px;        
+    border: 1px solid #cfcfcf;
+    outline: 0;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.popinput li:nth-child(2) input{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;        
+    border: 1px solid #cfcfcf;
+    outline: 0;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.popinput li:nth-child(3) input{
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;        
+    border: 1px solid #cfcfcf;
+    outline: 0;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.popinput li:nth-child(4) textarea{
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;        
+    border: 1px solid #cfcfcf;
+    outline: 0;
+    padding: 12px;
+    line-height: 1.4em;
+    box-sizing: border-box;
+    resize: none;
+}
+.popinput li:nth-child(5){
+    text-align: center;
+}
+.popinput .submit{
+    background-color: rgb(87, 234, 104);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    outline: 0;
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+     cursor: pointer;
+}
+.popinput img{
+     width: 28px;
+    height: 28px;
+    position: absolute;
+    right:10px;
+    top:10px;
+     filter: invert(100%) sepia(44%) saturate(3369%) hue-rotate(54deg) brightness(99%) contrast(85%);
+    cursor: pointer;
+}
+
+.popinput li .err{
+    border: 1px solid red !important;
+}

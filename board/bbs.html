@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bbs.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="bbs.js" defer></script>
+</head>
+<body>
+    <div class="search">
+        <h3><a href="#">제목 검색</a></h3>
+
+        <input type="text" id="search_input">
+        <img src="검색.svg" alt="">
+    </div>
+
+    <div class="list">
+        <header>
+            <ul>
+                <li>
+                    <p>순번</p>
+                    <p>제목</p>
+                    <p>글쓴이</p>
+                    <p>날짜</p>
+                    <p>조회</p>
+                    <p>관리</p>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <ul>
+                <!-- <li>
+                    <p>1</p>
+                    <p>aaaa</p>
+                    <p>홍길동</p>
+                    <p>2025-05-14</p>
+                    <p>1</p>
+                    <p>
+                        <button class="btnview">보기</button>
+                        <button class="btnedit">수정</button>
+                        <button class="btndel">삭제</button>
+                    </p>
+                </li>
+                <li>
+                    <p>1</p>
+                    <p>aaaa</p>
+                    <p>홍길동</p>
+                    <p>2025-05-14</p>
+                    <p>1</p>
+                    <p>
+                        <button class="btnview">보기</button>
+                        <button class="btnedit">수정</button>
+                        <button class="btndel">삭제</button>
+                    </p>
+                </li> -->
+            </ul>
+        </main>
+    </div>
+    <div class="insert">
+        <button class="btninsert">입력</button>
+    </div>
+
+    <div class="popinput">
+        <ul>
+            <li>
+                <input type="text" id="username" placeholder="이름을 입력해주세요">
+            </li>
+            <li>
+                <input type="text" id="usersubject" placeholder="제목을 입력해주세요">
+            </li>
+            <li>
+                <input type="date" name="regdate" id="regdate">
+            </li>
+            <li>
+                <textarea name="usercontent" id="usercontent" placeholder="내용을 입력해주세요"></textarea>
+            </li>
+            <li>
+                <input type="hidden" name="seq" id="seq">
+                <button class="submit">저장</button>
+            </li> 
+            <img src="닫기.svg" alt="">
+        </ul>
+    </div>
+</body>
+</html>
