@@ -136,9 +136,6 @@ window.addEventListener('scroll', () => {
 
 
 
-
-
-
 //스크롤 텍스트 애니메이션
 console.log("스크립트 실행됨");
 
@@ -231,5 +228,10 @@ closeBtn.addEventListener('click', () => {
   navMenu.classList.remove('active');
   overlay.classList.remove('active');
 })
+
+
+
+
+
 
 

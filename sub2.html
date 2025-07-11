@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeon</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="./script2.js" defer></script>
+    <script src="./script.js" defer></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans KR", sans-serif;
+          
+        }
+        ul{
+            list-style: none;
+        }
+        a:link, a:visited{
+            color: #333;
+            text-decoration: none;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(255, 255, 255, 1);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        }
+        .logo{
+            width: 10%;
+            height: 100px;
+            min-width: 200px;
+            /* background: url(./images/logo7.png) center/cover; */
+            margin-left: 72px;
+            /* background-color: red; */
+        }
+        .side{
+            width: 80%;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        .side h1{
+            color: rgb(237, 237, 237);
+            font-size: 4.2vw;
+            cursor: pointer;
+        }
+
+
+
+        .content_wrap{
+            width: 90%;
+            margin: auto;
+            height: 30vw;
+            /* overflow: hidden; */
+            overflow-y: scroll;
+            position: relative;
+        }
+        .content_wrap::-webkit-scrollbar{
+            width: 15px;
+        }
+        
+        .content_wrap::-webkit-scrollbar-thumb{
+            /* background-color: transparent; */
+            /* background-color: gray·/; */
+            background:linear-gradient(lightgray, black);
+            border-radius: 40px;
+            height: 20px;
+        }
+        .content_wrap::-webkit-scrollbar-track{
+            background-color: transparent;
+        }
+        .content_wrap h1{
+            font-size: 2vw;
+        }
+        .content1 ul,
+        .content2 ul,
+        .content3 ul,
+        .content4 ul{
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .content1 li,
+        .content2 li,
+        .content3 li,
+        .content4 li{
+            width: 28vw;
+            height: 25vw;
+            /* background-color: rgb(82, 82, 82); */
+            border-radius: 2vw;
+            margin-bottom: 2.5vw;
+            background-color: rgb(237, 237, 237);
+            cursor: pointer;
+        }
+        .content2 ul,
+        .content4 ul
+        {
+            height: 10vw;
+            width: 105.8%;
+            
+        }
+
+
+
+        /********이미지 리스트 **********/
+        .content1 li p,
+        .content2 li p,
+        .content3 li p,
+        .content4 li p
+        {
+            width: 28vw;
+            height: 17vw;
+            background-color: aqua;
+            border-radius: 2vw 2vw 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .content1 li:nth-child(1) p::before,
+        .content1 li:nth-child(2) p::before,
+        .content1 li:nth-child(3) p::before,
+        .content1 li:nth-child(4) p::before,
+        .content1 li:nth-child(5) p::before,
+        .content1 li:nth-child(6) p::before,
+
+        .content2 li:nth-child(1) p::before,
+        .content2 li:nth-child(2) p::before,
+        .content2 li:nth-child(3) p::before,
+
+        .content3 li:nth-child(1) p::before,
+        .content3 li:nth-child(2) p::before,
+        .content3 li:nth-child(3) p::before,
+        .content3 li:nth-child(4) p::before,
+        .content3 li:nth-child(5) p::before,
+        .content3 li:nth-child(6) p::before,
+
+        .content4 li:nth-child(1) p::before,
+        .content4 li:nth-child(2) p::before,
+        .content4 li:nth-child(3) p::before,
+        .content4 li:nth-child(4) p::before,
+        .content4 li:nth-child(5) p::before,
+        .content4 li:nth-child(6) p::before
+         {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;   
+        transition: transform 0.3s ease;
+        z-index: 0;
+        }
+
+        .content1 li:nth-child(1) p:hover::before, 
+        .content1 li:nth-child(2) p:hover::before, 
+        .content1 li:nth-child(3) p:hover::before, 
+        .content1 li:nth-child(4) p:hover::before, 
+        .content1 li:nth-child(5) p:hover::before, 
+        .content1 li:nth-child(6) p:hover::before,
+
+        .content2 li:nth-child(1) p:hover::before,
+        .content2 li:nth-child(2) p:hover::before,
+        .content2 li:nth-child(3) p:hover::before,
+
+        .content3 li:nth-child(1) p:hover::before, 
+        .content3 li:nth-child(2) p:hover::before, 
+        .content3 li:nth-child(3) p:hover::before, 
+        .content3 li:nth-child(4) p:hover::before, 
+        .content3 li:nth-child(5) p:hover::before, 
+        .content3 li:nth-child(6) p:hover::before,
+
+        .content4 li:nth-child(1) p:hover::before, 
+        .content4 li:nth-child(2) p:hover::before, 
+        .content4 li:nth-child(3) p:hover::before, 
+        .content4 li:nth-child(4) p:hover::before, 
+        .content4 li:nth-child(5) p:hover::before, 
+        .content4 li:nth-child(6) p:hover::before
+        {
+        transform: scale(1.1);
+        }
+
+
+        .content2 li p{
+            width: 28vw;
+            height: 17vw;
+            background-color: purple;
+            border-radius: 2vw 2vw 0 0;
+        }
+        .content3 li p{
+            width: 28vw;
+            height: 17vw;
+            background-color: pink;
+            border-radius: 2vw 2vw 0 0;
+        }
+        .content4 li p{
+            width: 28vw;
+            height: 17vw;
+            background-color: lightgreen;
+            border-radius: 2vw 2vw 0 0;
+        }
+        .con1,
+        .con2,
+        .con3,
+        .con4,
+        .con5,
+        .con6{
+            text-align: center;
+        }
+        .con1 h1,
+        .con2 h1,
+        .con3 h1,
+        .con4 h1,
+        .con5 h1,
+        .con6 h1{
+            margin-top: 14px;
+            font-size: 2.5vw;
+            padding: 0px 10px;
+        }
+        .con1 h4,
+        .con2 h4,
+        .con3 h4,
+        .con4 h4,
+        .con5 h4,
+        .con6 h4{
+            font-weight: normal;
+            margin-top: 4px;
+            font-size: 1vw;
+            padding: 0px 10px;
+        }
+
+         .content1{
+            background-color: white;
+            display: none;
+        }
+
+      
+        .content2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* opacity: 0; */
+            background-color: white;
+            display: none;
+        }
+        .content3{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* opacity: 0; */
+            background-color: white;
+            display: none;
+        }
+        .content4{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* opacity: 0; */
+            background-color: white;
+            display: none;
+        }
+
+        /************팝업창**************/
+
+        .pop_bg{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 12;
+            display: none;
+        }
+             .con1_pop1,
+             .con1_pop2,
+             .con1_pop3,
+             .con1_pop4,
+             .con1_pop5,
+             .con1_pop6,
+             .con2_pop1,
+             .con2_pop2,
+             .con2_pop3,
+             .con2_pop4,
+             .con2_pop5,
+             .con2_pop6,
+             .con3_pop1,
+             .con3_pop2,
+             .con3_pop3,
+             .con3_pop4,
+             .con3_pop5,
+             .con3_pop6,
+             .con4_pop1,
+             .con4_pop2,
+             .con4_pop3,
+             .con4_pop4,
+             .con4_pop5,
+             .con4_pop6
+             {
+            background-color: aquamarine;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            /* box-shadow: 0px 0px 20px gray; */
+            border-radius: 0;
+            transition: .4, all;
+            opacity: 0;
+            z-index: 14;
+            display: none;
+        }
+         .con1_pop1.active,
+         .con1_pop2.active,
+         .con1_pop3.active,
+         .con1_pop4.active,
+         .con1_pop5.active,
+         .con1_pop6.active,
+         .con2_pop1.active,
+         .con2_pop2.active,
+         .con2_pop3.active,
+         .con2_pop4.active,
+         .con2_pop5.active,
+         .con2_pop6.active,
+         .con3_pop1.active,
+         .con3_pop2.active,
+         .con3_pop3.active,
+         .con3_pop4.active,
+         .con3_pop5.active,
+         .con3_pop6.active,
+         .con4_pop1.active,
+         .con4_pop2.active,
+         .con4_pop3.active,
+         .con4_pop4.active,
+         .con4_pop5.active,
+         .con4_pop6.active
+         {
+            opacity: 1;
+        }
+        .pop1 .close,
+        .pop2 .close,
+        .pop3 .close,
+        .pop4 .close{
+            position: absolute;
+            right: -1vw;
+            top: -1vw;
+            cursor: pointer;
+            width: 50px;
+            z-index: 30;
+        }
+
+
+
+
+
+
+
+
+
+         /*******1.그래픽 메인 이미지 넣기*******/
+        .content1 li:nth-child(1) p::before{
+            background: url(./detail_img/g1.jpg) center/cover no-repeat;
+        }
+        .content1 li:nth-child(2) p::before{
+            background: url(./detail_img/g2.jpg) top/cover no-repeat;
+        }
+        .content1 li:nth-child(3) p::before{
+            background: url(./detail_img/g3.jpg) top/cover no-repeat;
+        }
+        .content1 li:nth-child(4) p::before{
+            background: url(./detail_img/g4.png) center/cover no-repeat;
+        }
+        .content1 li:nth-child(5) p::before{
+            background: url(./detail_img/g5.jpg) top/cover no-repeat;
+        }
+        .content1 li:nth-child(6) p::before{
+            background: url(./detail_img/g6.jpg) top/cover no-repeat;
+        }
+
+
+        /*******2.패키지 메인 이미지 넣기*******/
+        .content2 li:nth-child(1) p::before{
+            background: url(./package_img/p1.jpg) center/cover no-repeat;
+        }
+        .content2 li:nth-child(2) p::before{
+            background: url(./package_img/p2.jpg) center/cover no-repeat;
+        }
+
+        .content2 li:nth-child(3) p::before{
+            background: url(./package_img/p3.jpg) center/cover no-repeat;
+        }
+
+
+        /*******3.제품디자인 메인 이미지 넣기*******/
+        .content3 li:nth-child(1) p::before{
+            background: url(./product_img/pr1.jpg) center/cover no-repeat;
+        }
+        .content3 li:nth-child(2) p::before{
+            background: url(./product_img/pr2.jpg) center/cover no-repeat;
+        }
+        .content3 li:nth-child(3) p::before{
+            background: url(./product_img/pr3.jpg) center/cover no-repeat;
+        }
+        .content3 li:nth-child(4) p::before{
+            background: url(./product_img/pr4.jpg) center/cover no-repeat;
+        }
+        .content3 li:nth-child(5) p::before{
+            background: url(./product_img/pr5.jpg) center/cover no-repeat;
+        }
+        .content3 li:nth-child(6) p::before{
+            background: url(./product_img/pr6.jpg) center/cover no-repeat;
+        }
+
+         /*******4.연 메인 이미지 넣기*******/
+        .content4 li:nth-child(1) p::before{
+            background: url(./yeon_img/yeon_main2.jpg) center/cover no-repeat;
+        }
+        .content4 li:nth-child(2) p::before{
+            background: url(./yeon_img/y2.jpg) center/cover no-repeat;
+        }
+        .content4 li:nth-child(3) p::before{
+            background: url(./yeon_img/y3.jpg) center/cover no-repeat;
+        }
+
+
+
+
+
+        /*********1.팝업 이미지 넣기(그래픽)************/
+
+        .con1_pop1{
+            width: 800px;
+            height: 380px;
+            background: url(./detail_img/g1.jpg) center/cover;
+        }
+        .con1_pop2{
+            width: 350px;
+            height: 750px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /* background: url(./detail_img/g1.jpg) center/cover; */
+        }
+        .con1_pop2 img {
+            width: 100%;
+            display: block;
+        }
+        .con1_pop3{
+            width: 350px;
+            height: 750px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /* background: url(./detail_img/g1.jpg) center/cover; */
+        }
+        .con1_pop3 img {
+            width: 100%;
+            display: block;
+        }
+        .con1_pop4{
+            width: 520px;
+            height: 650px;
+            background: url(./detail_img/g4.png) center/cover;
+        }
+        .con1_pop5{
+            width: 350px;
+            height: 750px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /* background: url(./detail_img/g1.jpg) center/cover; */
+        }
+        .con1_pop5 img {
+            width: 100%;
+            display: block;
+        }
+        .con1_pop6{
+            width: 350px;
+            height: 750px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /* background: url(./detail_img/g1.jpg) center/cover; */
+        }
+        .con1_pop6 img {
+            width: 100%;
+            display: block;
+        }
+
+
+
+        /*********2.팝업 이미지 넣기(패키지)************/
+        .con2_pop1{
+            width: 800px;
+            height: 500px;
+            background: url(./package_img/p1.jpg) center/cover;
+        }
+        .con2_pop2{
+            width: 800px;
+            height: 500px;
+            background: url(./package_img/p2.jpg) center/cover;
+        }
+        .con2_pop3{
+            width: 800px;
+            height: 500px;
+            background: url(./package_img/p3.jpg) center/cover;
+        }
+
+
+        /*********3.팝업 이미지 넣기(제품)************/
+        .con3_pop1{
+            width: 350px;
+            height: 750px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .con3_pop1 img {
+            width: 100%;
+            display: block;
+        }
+
+        .con3_pop2{
+            width: 550px;
+            height: 770px;
+            background: url(./product_img/pr2-1.jpg) center/cover;
+        }
+        .con3_pop3{
+            width: 550px;
+            height: 750px;
+            background: url(./product_img/pr3-1.jpg) center/cover;
+        }
+        .con3_pop4{
+            width: 550px;
+            height: 750px;
+            background: url(./product_img/pr4-1.jpg) center/cover;
+        }
+        .con3_pop5{
+            width: 550px;
+            height: 750px;
+            background: url(./product_img/pr5-1.jpg) center/cover;
+        }
+        .con3_pop6{
+            width: 550px;
+            height: 750px;
+            background: url(./product_img/pr6-1.jpg) center/cover;
+        }
+
+
+
+        /*********4.팝업 이미지 넣기(연)************/
+
+        .con4_pop1{
+            width: 500px;
+            height: 750px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .con4_pop1 img {
+            width: 100%;
+            display: block;
+        }
+        .con4_pop2{
+            width: 550px;
+            height: 750px;
+            background: url(./yeon_img/y2-1.jpg) center/cover;
+        }
+        .con4_pop3{
+            width: 500px;
+            height: 750px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .con4_pop3 img {
+            width: 100%;
+            display: block;
+        }
+
+
+
+
+       
+     
+    </style>
+
+
+
+
+</head>
+<body>
+    <div class="pop_bg"></div>
+     <header>
+        <div class="logo">
+            <a href="./portfolio2.html">
+            <img src="./images/logo7.png" alt="로고" width="215"></a>
+        </div>
+      </header>
+
+      <main>
+         
+        <!-- 팝업창 -->
+        <div class="pop1">
+            <div class="con1_pop1">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con1_pop2">
+                <img src="./detail_img/g2-1.jpg" alt="상세페이지">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con1_pop3">
+                <img src="./detail_img/vitamin.jpg" alt="상세페이지">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con1_pop4">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con1_pop5">
+                <img src="./detail_img/g5-1.png" alt="상세페이지">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con1_pop6">
+                <img src="./detail_img/g6-1.png" alt="상세페이지">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+        </div>
+
+
+        <div class="pop2">
+             <div class="con2_pop1">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con2_pop2">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con2_pop3">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+        </div>
+
+        <div class="pop3">
+            <div class="con3_pop1">
+                <img src="./product_img/pr1-1.png" alt="상세페이지">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con3_pop2">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con3_pop3">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con3_pop4">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con3_pop5">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con3_pop6">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+
+            <div class="pop4">
+                <div class="con4_pop1">
+                <img src="./yeon_img/y1-1.jpg" alt="상세페이지">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con4_pop2">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            <div class="con4_pop3">
+                <img src="./yeon_img/y3-1.jpg" alt="상세페이지">
+                <img src="./images/close.png" alt="닫기" width="50" class="close">
+            </div>
+            </div>
+        </div>
+    
+
+        <div class="side">
+            <h1 class="banner">GRAPHIC</h1>
+            <h1 class="package">PACKAGE</h1>
+            <h1 class="product">PRODUCT</h1>
+            <h1 class="yeon">YEON</h1>
+        </div>
+
+        <div class="content_wrap">
+        <!-- 그래픽 -->
+        <div class="content1">
+            <ul>
+                <li class="con1">
+                    <p></p>
+                    <h1>[배너] 제작</h1>
+                    <h4>회사 / Use tool : Photoshop</h4>
+                </li>
+                <li class="con2">
+                    <p></p>
+                    <h1>[상세페이지] 제작</h1>
+                    <h4>회사 / Use tool : Photoshop</h4>
+                </li>
+                <li class="con3">
+                    <p></p>
+                    <h1>[상세페이지] 제작</h1>
+                    <h4>회사 / Use tool : Photoshop</h4>
+                </li>
+                <li class="con4">
+                    <p></p>
+                    <h1>[배너] 제작</h1>
+                    <h4>학원 / Use tool : Photoshop</h4>
+                </li>
+                <li class="con5">
+                    <p></p>
+                    <h1>[상세페이지] 제작</h1>
+                    <h4>학원 / Use tool : Photoshop</h4>
+                </li>
+                <li class="con6">
+                    <p></p>
+                    <h1>[상세페이지] 제작</h1>
+                    <h4>학원 / Use tool : Illustrator</h4>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- 패키지 -->
+        <div class="content2">
+            <ul>
+                <li class="con1">
+                    <p></p>
+                    <h1>[패키지] 제작</h1>
+                    <h4>회사 / Use tool : Illustrator</h4>
+                </li>
+                <li class="con2">
+                    <p></p>
+                    <h1>[패키지] 제작</h1>
+                    <h4>회사 / Use tool : Illustrator</h4>
+                </li>
+                <li class="con3">
+                    <p></p>
+                    <h1>[패키지] 제작</h1>
+                    <h4>회사 / Use tool : Illustrator</h4>
+                </li>
+            </ul>
+        </div>
+
+
+         <!-- 제품디자인 -->
+        <div class="content3">
+            <ul>
+                <li class="con1">
+                    <p></p>
+                    <h1>[졸업작품] Belita</h1>
+                    <h4>세그웨이 + 유모차 / Use tool : UG NX, Keyshot</h4>
+                </li>
+                <li class="con2">
+                    <p></p>
+                    <h1>[HEATER]</h1>
+                    <h4>온풍기 내부 / Use tool : UG NX, Keyshot </h4>
+                </li>
+                <li class="con3">
+                    <p></p>
+                    <h1>[MIMUSE]</h1>
+                    <h4>CD플레이어 + 거울 / Use tool : UG NX, Keyshot</h4>
+                </li>
+                <li class="con4">
+                    <p></p>
+                    <h1>[SWIRL MIXER]</h1>
+                    <h4>믹서기 + 정수기 / Use tool : UG NX, Keyshot</h4>
+                </li>
+                <li class="con5">
+                    <p></p>
+                    <h1>[MSI SEGWAY]</h1>
+                    <h4>MSI + 세그웨이 / Use tool : Rhino, Keyshot</h4>
+                </li>
+                <li class="con6">
+                    <p></p>
+                    <h1>[모듈형 냉장고]</h1>
+                    <h4>모듈형 냉장고 / Use tool : UG NX, Keyshot</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="content4">
+            <ul>
+                <li class="con1">
+                    <p></p>
+                    <h1>캐릭터 디자인</h1>
+                    <h4>브랜드, 굿즈 제작 및 일러스트페어 참가</h4>
+                </li>
+                <li class="con2">
+                    <p></p>
+                    <h1>부천시 공모전</h1>
+                    <h4>부천시 대표 이미지 공모전에 참가한 일러스트</h4>
+                </li>
+                <li class="con3">
+                    <p></p>
+                    <h1>성당 달력 일러스트</h1>
+                    <h4>성당 달력 일러스트 외주로 제작</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+      </main>
+</body>
+</html>
